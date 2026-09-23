@@ -1,0 +1,105 @@
+.va-page { width:100%}
+.va-page .page-header,.va-page .page-header__actions { flex-wrap:wrap}
+
+.va-button { display:inline-flex; align-items:center; justify-content:center; min-height:36px; padding:8px 12px; border:1px solid var(--border); border-radius:8px; background:#fff; font-size:11px; font-weight:600; cursor:pointer}
+.va-button:hover { background:#f1f6f3; border-color:#b7d6c7}
+.va-button--primary { background:#16955f; color:#fff; border-color:#16955f}
+.va-button--primary:hover { background:#117a4d}
+.va-button--danger { color:#c05b5b; margin-right:auto}
+.va-page :is(button,input,textarea):focus-visible { outline:2px solid #16955f; outline-offset:3px}
+
+.va-empty { display:flex; min-height:330px; flex-direction:column; align-items:center; justify-content:center; padding:34px 24px; text-align:center}
+.va-empty__icon { display:grid; place-items:center; width:58px; height:58px; margin-bottom:20px; background:#edf7f1; border:1px solid #dbeee3; border-radius:16px; color:#198b5c}
+.va-empty__icon svg { width:27px; height:27px}
+.va-eyebrow { color:#778990; font-size:9px; font-weight:700; letter-spacing:1px; text-transform:uppercase}
+.va-empty h2 { margin:10px 0 0; font-size:20px; letter-spacing:-.4px}
+.va-empty p { max-width:520px; margin:11px 0 22px; color:var(--muted); font-size:12px; line-height:1.8}
+.va-actions { display:flex; justify-content:center; gap:8px; flex-wrap:wrap}
+
+.va-dashboard-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; margin-top:16px}
+.va-dashboard-card { min-width:0; overflow:hidden}
+.va-card-heading { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:18px; border-bottom:1px solid var(--border)}
+.va-card-heading h2 { margin:0; font-size:13px; font-weight:700; letter-spacing:-.15px}
+.va-count { flex-shrink:0; padding:4px 7px; border-radius:5px; background:#f1f4f5; color:#778790; font-size:9px; font-weight:600}
+
+.va-helper { color:var(--muted); font-size:10px; line-height:1.6}
+.va-dashboard-card>.va-helper { margin:12px 18px 18px}
+
+.va-table th { font-size:8px; padding:0 10px}
+.va-table td { height:60px; padding:8px 10px; font-size:10px}
+.va-table td strong { display:block; color:#344653; font-size:10px; font-weight:600}
+.va-table td small { display:block; color:var(--muted); font-size:9px; margin-top:5px}
+.va-badge { display:inline-block; padding:4px 6px; background:#e8f6ee; color:#188053; border-radius:5px; font-size:9px; font-weight:600; white-space:nowrap}
+.va-badge--pending { background:#fff5df; color:#a47725}
+.va-row-action { padding:5px 7px; border:1px solid #d9e9df; border-radius:5px; color:#19845a; background:#f7fbf8; font-size:10px; font-weight:600; cursor:pointer; white-space:nowrap}
+.va-row-action:hover { background:#e6f5ed}
+.va-progress { display:flex; align-items:center; gap:6px; font-size:9px}
+.va-progress progress { width:46px; height:5px; border:0; border-radius:4px; overflow:hidden; background:#eaf0ed; accent-color:#20b876}
+.va-progress progress::-webkit-progress-bar { background:#eaf0ed}
+.va-progress progress::-webkit-progress-value { background:#20b876}
+.va-progress progress::-moz-progress-bar { background:#20b876}
+
+.va-session-grid { display:grid; grid-template-columns:minmax(0,1.85fr) minmax(300px,1fr); gap:16px; align-items:stretch}
+.va-workspace,.va-editor { display:flex; flex-direction:column; min-width:0; overflow:hidden}
+.va-workspace .va-card-heading h2 { margin-top:6px; font-size:15px}
+.va-player { position:relative; display:flex; flex-direction:column; justify-content:space-between; flex:1; min-height:240px; margin:12px; overflow:hidden; border-radius:9px; color:#fff; background:radial-gradient(ellipse at center,#203c45,#0d1b2a 75%)}
+.va-player__badge { position:absolute; top:14px; left:14px; background:#193e35; color:#7ce1af}
+.va-player__placeholder { display:flex; flex:1; align-items:center; justify-content:center; flex-direction:column; gap:10px; padding:40px 16px 24px; text-align:center}
+.va-player__placeholder svg { width:42px; height:42px; color:#668c87; margin-bottom:4px}
+.va-player__placeholder strong { font-size:13px; color:#d4e2e5}
+.va-player__placeholder span { font-size:10px; color:#90a4ad; overflow-wrap:anywhere}
+.va-player__placeholder small { font-size:9px; color:#718d96}
+.va-player__controls { display:flex; align-items:center; gap:12px; padding:10px; background:#0b1621; font-size:10px}
+.va-player__controls button { padding:0; color:#d9e8ed; border:0; background:transparent; font-size:16px}
+.va-playback-track { flex:1; height:3px; border-radius:2px; background:#34444f}
+
+.va-timeline { padding:2px 14px 8px}
+.va-timeline__heading,.va-timeline__labels { display:flex; justify-content:space-between; gap:12px; font-size:10px}
+.va-timeline__heading span,.va-timeline__labels { color:var(--muted); font-size:9px}
+.va-timeline__track { position:relative; height:26px; margin:10px 0 6px; border:1px solid #e2e9e6; border-radius:5px; background:repeating-linear-gradient(90deg,#f4f7f5 0,#f4f7f5 calc(5% - 1px),#e4ebe7 calc(5% - 1px),#e4ebe7 5%)}
+.va-timeline__track i { position:absolute; top:4px; width:5px; height:16px; background:#20b876; border-radius:2px}
+.va-timeline__track i:nth-child(2n) { background:#69a2ce}
+.va-timeline__track i:nth-child(3n) { background:#d5ab59}
+
+.va-editor__body { padding:0 14px 8px}
+.va-fields { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px}
+.va-fields label,.va-field { display:flex; flex-direction:column; gap:4px; color:#50616d; font-size:10px; font-weight:600}
+.va-field { margin-top:8px}
+.va-editor input,.va-editor textarea { width:100%; min-width:0; padding:7px 9px; color:var(--text); font:inherit; font-weight:400; background:#fbfcfc; border:1px solid var(--border); border-radius:6px}
+.va-editor textarea { resize:vertical}
+.va-editor input::placeholder,.va-editor textarea::placeholder { color:#97a1a8}
+.va-tags { display:flex; flex-wrap:wrap; gap:5px; margin-top:8px}
+.va-tags button { padding:5px 7px; color:#65766e; font-size:9px; border:1px solid #e0e9e4; border-radius:5px; background:#f7faf8}
+.va-editor__actions { display:flex; flex-wrap:wrap; gap:6px; padding-top:10px; margin-top:10px; border-top:1px solid var(--border)}
+.va-editor__actions .va-button { font-size:10px; padding-inline:9px}
+
+/* Hide only this route's page scrollbar; leave document scrolling enabled. */
+html:has(.va-page), body:has(.va-page) { scrollbar-width: none; -ms-overflow-style: none; }
+html:has(.va-page)::-webkit-scrollbar, body:has(.va-page)::-webkit-scrollbar { display: none; }
+.va-session-grid .va-card-heading { padding: 12px 14px; }
+.va-editor__body > .va-helper { margin: 8px 0; }
+.va-dashboard-card { display: flex; flex-direction: column; }
+.va-dashboard-card .va-card-heading { min-height: 62px; padding: 12px; }
+.va-dashboard-card > .va-helper { margin: 10px 12px 12px; }
+.va-dashboard-card .va-table { white-space: normal; table-layout: fixed; }
+.va-dashboard-card .va-table td, .va-dashboard-card .va-table th { padding-inline: 6px; }
+.va-dashboard-card .va-table th:first-child { width: 34%; }
+.va-dashboard-card .va-table td:first-child { overflow-wrap: anywhere; }
+.va-dashboard-card .va-table td { height: 66px; }
+.va-dashboard-card .va-progress { flex-wrap: wrap; gap: 3px; }
+@media(max-width:1199px) { .va-dashboard-grid { grid-template-columns:minmax(0,1fr); } }
+
+@media(max-width:1000px) { .va-session-grid { grid-template-columns:minmax(0,1fr)}
+}
+
+@media(max-width:520px) { .va-page .page-header__actions { gap:8px; flex:1}
+.va-page .page-header__actions>.va-button { flex-grow:1}
+.va-empty { padding:28px 16px}
+.va-empty h2 { font-size:18px}
+.va-actions { flex-direction:column; width:100%}
+.va-fields { grid-template-columns:minmax(0,1fr)}
+.va-card-heading { padding:14px; flex-wrap:wrap}
+.va-player { margin:10px; min-height:290px}
+.va-player__controls { gap:8px}
+}
+

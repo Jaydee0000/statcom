@@ -5,6 +5,7 @@ const navigation: { label: string; icon: IconName; path: string }[] = [
   { label: 'Dashboard', icon: 'dashboard', path: '/' },
   { label: 'Players', icon: 'players', path: '/players' },
   { label: 'Matches', icon: 'matches', path: '/matches' },
+  { label: 'Team Stat Sheet', icon: 'analytics', path: '/team-stats' },
   { label: 'Video Analysis', icon: 'video', path: '/video-analysis' },
   { label: 'Analytics', icon: 'analytics', path: '/analytics' },
   { label: 'Reports', icon: 'reports', path: '/reports' },

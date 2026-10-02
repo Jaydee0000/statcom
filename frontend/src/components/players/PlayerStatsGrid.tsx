@@ -1,10 +1,11 @@
-import type { PlayerStats } from '../../types/player'
+import type { MetricDefinition, MetricValue } from '../../types/reporting'
+import { formatMetric, metricValue } from '../../types/reporting'
 
-export default function PlayerStatsGrid({ stats }: { stats: PlayerStats }) {
-  const items = [
-    ['Minutes Played', stats.minutesPlayed.toLocaleString()], ['Goals', stats.goals], ['Assists', stats.assists],
-    ['Progressive Passes', stats.progressivePasses], ['Tackles', stats.tackles], ['Interceptions', stats.interceptions],
-    ['Turnovers', stats.turnovers], ['Average Rating', stats.averageRating.toFixed(1)],
-  ]
-  return <section className="stats-grid" aria-label="Current season statistics">{items.map(([label, value]) => <div className="stat-block" key={label}><span>{label}</span><strong>{value}</strong></div>)}</section>
+export default function PlayerStatsGrid({ values, definitions, onTrace }: { values: MetricValue[]; definitions: MetricDefinition[]; onTrace: (key: string) => void }) {
+  return <section className="stats-grid" aria-label="Current season statistics">{definitions.map(definition => {
+    const value = metricValue(values, definition.key)
+    return <div className="stat-block" key={definition.key}><span>{definition.label}</span>{definition.traceable && value !== null
+      ? <button type="button" className="trace-stat" onClick={() => onTrace(definition.key)}>{formatMetric(definition, value)}</button>
+      : <strong>{formatMetric(definition, value)}</strong>}</div>
+  })}</section>
 }

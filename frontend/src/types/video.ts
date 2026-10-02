@@ -5,5 +5,5 @@ export type Video = {
   dateAdded: string
   duration: string
   progress?: number
-  status: 'Not Started' | 'In Progress' | 'Annotated' | 'Reviewed'
+  status: 'Not Started' | 'In Progress' | 'Ready for Review' | 'Reviewed'
 }

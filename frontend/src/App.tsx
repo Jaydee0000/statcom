@@ -4,6 +4,8 @@ import DashboardPage from './pages/DashboardPage'
 import PlayerProfilePage from './pages/PlayerProfilePage'
 import PlayersPage from './pages/PlayersPage'
 import MatchesPage from './pages/MatchesPage'
+import MatchDetailPage from './pages/MatchDetailPage'
+import TeamStatSheetPage from './pages/TeamStatSheetPage'
 import VideoAnalysisPage from './pages/VideoAnalysisPage'
 import AnalyticsPage from './pages/AnalyticsPage'
 import ReportsPage from './pages/ReportsPage'
@@ -18,6 +20,8 @@ function App() {
         <Route path="players" element={<PlayersPage />} />
         <Route path="players/:id" element={<PlayerProfilePage />} />
         <Route path="matches" element={<MatchesPage />} />
+        <Route path="matches/:id" element={<MatchDetailPage />} />
+        <Route path="team-stats" element={<TeamStatSheetPage />} />
         <Route path="video-analysis" element={<VideoAnalysisPage />} />
         <Route path="analytics" element={<AnalyticsPage />} />
         <Route path="reports" element={<ReportsPage />} />

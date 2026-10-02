@@ -6,7 +6,7 @@
 .va-button--primary { background:#16955f; color:#fff; border-color:#16955f}
 .va-button--primary:hover { background:#117a4d}
 .va-button--danger { color:#c05b5b; margin-right:auto}
-.va-page :is(button,input,textarea):focus-visible { outline:2px solid #16955f; outline-offset:3px}
+.va-page :is(button,input,textarea,select):focus-visible { outline:2px solid #16955f; outline-offset:3px}
 
 .va-empty { display:flex; min-height:330px; flex-direction:column; align-items:center; justify-content:center; padding:34px 24px; text-align:center}
 .va-empty__icon { display:grid; place-items:center; width:58px; height:58px; margin-bottom:20px; background:#edf7f1; border:1px solid #dbeee3; border-radius:16px; color:#198b5c}
@@ -16,7 +16,7 @@
 .va-empty p { max-width:520px; margin:11px 0 22px; color:var(--muted); font-size:12px; line-height:1.8}
 .va-actions { display:flex; justify-content:center; gap:8px; flex-wrap:wrap}
 
-.va-dashboard-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; margin-top:16px}
+.va-dashboard-grid { display:grid; grid-template-columns:minmax(0,.25fr) minmax(0,.45fr) minmax(0,.30fr); align-items:stretch; gap:14px; margin-top:16px}
 .va-dashboard-card { min-width:0; overflow:hidden}
 .va-card-heading { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:18px; border-bottom:1px solid var(--border)}
 .va-card-heading h2 { margin:0; font-size:13px; font-weight:700; letter-spacing:-.15px}
@@ -39,10 +39,10 @@
 .va-progress progress::-webkit-progress-value { background:#20b876}
 .va-progress progress::-moz-progress-bar { background:#20b876}
 
-.va-session-grid { display:grid; grid-template-columns:minmax(0,1.85fr) minmax(300px,1fr); gap:16px; align-items:stretch}
+.va-session-grid { display:grid; grid-template-columns:minmax(0,1.85fr) minmax(300px,1fr); gap:14px; align-items:stretch}
 .va-workspace,.va-editor { display:flex; flex-direction:column; min-width:0; overflow:hidden}
 .va-workspace .va-card-heading h2 { margin-top:6px; font-size:15px}
-.va-player { position:relative; display:flex; flex-direction:column; justify-content:space-between; flex:1; min-height:240px; margin:12px; overflow:hidden; border-radius:9px; color:#fff; background:radial-gradient(ellipse at center,#203c45,#0d1b2a 75%)}
+.va-player { position:relative; display:flex; flex-direction:column; justify-content:space-between; flex:1; min-height:200px; margin:10px; overflow:hidden; border-radius:9px; color:#fff; background:radial-gradient(ellipse at center,#203c45,#0d1b2a 75%)}
 .va-player__badge { position:absolute; top:14px; left:14px; background:#193e35; color:#7ce1af}
 .va-player__placeholder { display:flex; flex:1; align-items:center; justify-content:center; flex-direction:column; gap:10px; padding:40px 16px 24px; text-align:center}
 .va-player__placeholder svg { width:42px; height:42px; color:#668c87; margin-bottom:4px}
@@ -56,21 +56,21 @@
 .va-timeline { padding:2px 14px 8px}
 .va-timeline__heading,.va-timeline__labels { display:flex; justify-content:space-between; gap:12px; font-size:10px}
 .va-timeline__heading span,.va-timeline__labels { color:var(--muted); font-size:9px}
-.va-timeline__track { position:relative; height:26px; margin:10px 0 6px; border:1px solid #e2e9e6; border-radius:5px; background:repeating-linear-gradient(90deg,#f4f7f5 0,#f4f7f5 calc(5% - 1px),#e4ebe7 calc(5% - 1px),#e4ebe7 5%)}
+.va-timeline__track { position:relative; height:24px; margin:8px 0 6px; border:1px solid #e2e9e6; border-radius:5px; background:repeating-linear-gradient(90deg,#f4f7f5 0,#f4f7f5 calc(5% - 1px),#e4ebe7 calc(5% - 1px),#e4ebe7 5%)}
 .va-timeline__track i { position:absolute; top:4px; width:5px; height:16px; background:#20b876; border-radius:2px}
 .va-timeline__track i:nth-child(2n) { background:#69a2ce}
 .va-timeline__track i:nth-child(3n) { background:#d5ab59}
 
 .va-editor__body { padding:0 14px 8px}
-.va-fields { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px}
+.va-fields { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:6px 8px}
 .va-fields label,.va-field { display:flex; flex-direction:column; gap:4px; color:#50616d; font-size:10px; font-weight:600}
 .va-field { margin-top:8px}
-.va-editor input,.va-editor textarea { width:100%; min-width:0; padding:7px 9px; color:var(--text); font:inherit; font-weight:400; background:#fbfcfc; border:1px solid var(--border); border-radius:6px}
+.va-editor input,.va-editor textarea,.va-editor select { width:100%; min-width:0; padding:6px 8px; color:var(--text); font:inherit; font-weight:400; background:#fbfcfc; border:1px solid var(--border); border-radius:6px}
 .va-editor textarea { resize:vertical}
 .va-editor input::placeholder,.va-editor textarea::placeholder { color:#97a1a8}
 .va-tags { display:flex; flex-wrap:wrap; gap:5px; margin-top:8px}
 .va-tags button { padding:5px 7px; color:#65766e; font-size:9px; border:1px solid #e0e9e4; border-radius:5px; background:#f7faf8}
-.va-editor__actions { display:flex; flex-wrap:wrap; gap:6px; padding-top:10px; margin-top:10px; border-top:1px solid var(--border)}
+.va-editor__actions { display:flex; flex-wrap:wrap; gap:6px; padding-top:8px; margin-top:8px; border-top:1px solid var(--border)}
 .va-editor__actions .va-button { font-size:10px; padding-inline:9px}
 
 /* Hide only this route's page scrollbar; leave document scrolling enabled. */
@@ -87,6 +87,13 @@ html:has(.va-page)::-webkit-scrollbar, body:has(.va-page)::-webkit-scrollbar { d
 .va-dashboard-card .va-table td:first-child { overflow-wrap: anywhere; }
 .va-dashboard-card .va-table td { height: 66px; }
 .va-dashboard-card .va-progress { flex-wrap: wrap; gap: 3px; }
+.va-dropzone { display:flex; flex:1; min-height:180px; flex-direction:column; align-items:center; justify-content:center; gap:10px; margin:12px 12px 0; padding:18px 12px; border:1px dashed #b7d6c7; border-radius:9px; background:#f7faf8; color:#65766e; text-align:center; cursor:pointer; }
+.va-dropzone svg { width:28px; height:28px; color:#198b5c; }
+.va-dropzone strong { font-size:12px; font-weight:600; }
+.va-dropzone span { font-size:11px; }
+.va-dropzone b { color:#19845a; font-weight:600; }
+.va-dropzone small { color:var(--muted); font-size:9px; }
+.va-dropzone:hover { background:#f1f6f3; }
 @media(max-width:1199px) { .va-dashboard-grid { grid-template-columns:minmax(0,1fr); } }
 
 @media(max-width:1000px) { .va-session-grid { grid-template-columns:minmax(0,1fr)}
@@ -99,7 +106,46 @@ html:has(.va-page)::-webkit-scrollbar, body:has(.va-page)::-webkit-scrollbar { d
 .va-actions { flex-direction:column; width:100%}
 .va-fields { grid-template-columns:minmax(0,1fr)}
 .va-card-heading { padding:14px; flex-wrap:wrap}
-.va-player { margin:10px; min-height:290px}
+.va-player { margin:10px; min-height:220px}
 .va-player__controls { gap:8px}
 }
 
+/* Functional controls use the existing card, color, and typography system. */
+.va-intake-fields { padding:8px 12px; display:flex; flex-direction:column; gap:8px; }
+.va-intake-fields input,.va-intake-fields select { width:100%; min-width:0; padding:6px 8px; font:inherit; border:1px solid var(--border); border-radius:6px; background:#fbfcfc; }
+.va-intake-fields progress { width:100%; accent-color:#16955f; }
+.va-error { color:#a33f3f; font-size:11px; line-height:1.6; }
+.va-page button:disabled { opacity:.55; cursor:wait; }
+.va-player video { width:100%; height:260px; object-fit:contain; background:#0d1b2a; }
+.va-player__controls { flex-wrap:wrap; }
+.va-player__controls input[aria-label="Seek"] { flex:1; min-width:60px; accent-color:#20b876; }
+.va-player__controls input[aria-label="Volume"] { width:55px; accent-color:#20b876; }
+.va-player__controls select { font:inherit; color:#d9e8ed; background:#0b1621; border:1px solid #34444f; border-radius:4px; }
+.va-player__controls button { font-size:11px; cursor:pointer; }
+
+/* Milestone 3 annotation controls retain the existing workspace/card vocabulary. */
+.va-editor__body { overflow:auto; max-height:720px; scrollbar-width:thin; }
+.va-range-summary { display:flex; align-items:center; justify-content:space-between; gap:8px; margin:10px 0 7px; padding:9px 10px; border:1px solid #dcebe3; border-radius:7px; background:#f5faf7; color:#40534b; font-size:10px; }
+.va-range-summary strong { color:#188053; text-transform:uppercase; letter-spacing:.4px; font-size:9px; }
+.va-range-actions { display:flex; flex-wrap:wrap; gap:5px; }
+.va-inline-action { align-self:flex-start; margin-top:7px; }
+.va-inline-form { display:flex; flex-direction:column; gap:6px; margin-top:7px; padding:8px; border:1px solid var(--border); border-radius:7px; background:#f9fbfa; }
+.va-skill-field-row { display:grid; grid-template-columns:1fr .8fr; gap:5px; padding-top:6px; border-top:1px solid var(--border); }
+.va-skill-field-row label { display:flex; align-items:center; gap:5px; font-size:9px; }
+.va-skill-field-row label input { width:auto; }
+.va-participant-row { display:grid; grid-template-columns:1.25fr .8fr auto; gap:5px; margin-top:5px; }
+.va-tag-tools { display:grid; grid-template-columns:1fr .8fr; gap:5px; margin-top:9px; }
+.va-tags button { cursor:pointer; }
+.va-tags button.is-selected { color:#116f49; background:#e2f5eb; box-shadow:inset 0 0 0 1px #74b999; }
+.va-success { color:#188053; font-size:10px; font-weight:600; }
+.va-timeline__track .va-marker { position:absolute; top:4px; min-width:5px; height:16px; padding:0; border:1px solid rgba(255,255,255,.85); border-radius:3px; cursor:pointer; box-shadow:0 1px 2px rgba(28,57,44,.2); }
+.va-timeline__track .va-marker--point { width:5px; transform:translateX(-2px); }
+.va-timeline__track .va-marker.is-selected { outline:2px solid #183f32; outline-offset:1px; z-index:2; }
+.va-annotation-list { margin-top:9px; border-top:1px solid var(--border); }
+.va-annotation-list__head,.va-annotation-list>button { display:grid; grid-template-columns:.75fr 1.35fr 1fr .8fr .75fr; gap:6px; align-items:center; width:100%; padding:7px 5px; text-align:left; }
+.va-annotation-list__head { color:var(--muted); font-size:8px; font-weight:700; text-transform:uppercase; }
+.va-annotation-list>button { color:#53636c; font:inherit; font-size:9px; border:0; border-top:1px solid #edf1ef; background:transparent; cursor:pointer; }
+.va-annotation-list>button:hover,.va-annotation-list>button.is-selected { background:#f1f8f4; }
+.va-annotation-list>button strong,.va-annotation-list>button small { display:block; overflow:hidden; text-overflow:ellipsis; }
+.va-annotation-list>button small { color:var(--muted); margin-top:2px; }
+@media(max-width:620px) { .va-annotation-list__head { display:none; } .va-annotation-list>button { grid-template-columns:1fr; } .va-participant-row,.va-tag-tools { grid-template-columns:1fr; } }
